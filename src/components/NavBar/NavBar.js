@@ -1,8 +1,10 @@
 import './NavBar.css';
+import { CartWidget } from '../CartWidget/CartWidget.js';
 
 export const NavBar = () => {
     return(
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <div className="bg-light">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light container">
           <a className="navbar-brand" href="*">
             <img className="logo" src="../logo.png" alt="logo"/>
           </a>
@@ -12,7 +14,7 @@ export const NavBar = () => {
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
-              <li class="nav-item active">
+              <li className="nav-item active">
                 <a className="nav-link" href="*">Tienda</a>
               </li>
               <li className="nav-item">
@@ -26,10 +28,11 @@ export const NavBar = () => {
               </li>
             </ul>
           </div>
+          <CartWidget/>
         </nav>
+      </div>
     )
 }
-
 
 
 
