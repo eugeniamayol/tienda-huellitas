@@ -1,8 +1,5 @@
-.contenedor{
-    background-color: #eee;
-}
-
 .titulo{
     text-transform: uppercase;
     text-align: center;
+    margin-bottom: 50px;
 }
