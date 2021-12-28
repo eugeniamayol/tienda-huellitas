@@ -1,0 +1,14 @@
+.itemCard{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+}
+
+.imgCard{
+	width: 200px;
+	height: 200px;
+	margin: 20px;
+	border-radius: 50px;
+}
