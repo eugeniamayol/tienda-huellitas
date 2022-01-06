@@ -5,7 +5,7 @@ const productos = [
       "id": "100",
       "categories": "collares",
       "photo": "https://cdn.shopify.com/s/files/1/0185/9786/products/1_Yaxha_Azul_Frente_sin_mo_o_1300x1300.jpg?v=1619234063",
-      "stock": 0,
+      "stock": 3,
       "description": "Collar para perro regulable color azul. Ancho 4 cm. Cuenta con hebilla de metal reforzada. No incluye chapita identificadora. Este modelo es para un perro de raza chica."
     },
     {

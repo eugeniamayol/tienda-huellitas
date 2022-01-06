@@ -7,7 +7,7 @@ export const Item = ({item}) => {
             <div className="card-body">
                 <img src={item.photo} className="card-img-top imgCard" alt="..."/>
                 <p className="card-text">Precio ${item.price}</p>
-                <a href="*" className="btn btn-primary">Ver más</a>
+                <a href="ItemDetail.js" className="btn btn-primary">Ver más</a>
             </div>
             <div className="card-footer text-muted">Stock disponible: {item.stock}</div>
       </div>

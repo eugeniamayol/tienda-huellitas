@@ -1,0 +1,25 @@
+.containerDetail{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: "img des"
+						 "img des";
+	justify-content: center;
+	align-items: center;
+	border: solid;
+	border-radius: 5%;
+	border-color: black;
+	margin: 20px;
+}
+
+
+.imgDetail{
+	grid-area: img;
+}
+
+img{
+	width: 100%;
+}
+
+.descriptionDetail{
+	grid-area: des;
+}
