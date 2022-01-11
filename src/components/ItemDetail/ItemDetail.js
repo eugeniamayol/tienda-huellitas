@@ -6,7 +6,7 @@ export const ItemDetail = ({ producto }) => {
   return (
     <section className="containerDetail">
       <div className="imgDetail">
-        <img src={producto.photo} alt="" />
+        <img src={producto.photo} alt=""/>
       </div>
 
       <div className="descriptionDetail">
