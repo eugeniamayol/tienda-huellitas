@@ -1,20 +1,34 @@
 import "./ItemDetail.css";
 import { ItemCount } from '../ItemCount/ItemCount.js';
+import { useState } from 'react';
+import { Link } from "react-router-dom";
 
 export const ItemDetail = ({ producto }) => {
 
+  const [ mostrar, setMostrar ] = useState(true)
+
+  const onAdd = () => {
+    setMostrar(false)
+  }
+
   return (
     <section className="containerDetail">
-      <div className="imgDetail">
-        <img src={producto.photo} alt=""/>
+      <div className="containerImgDetail">
+        <img className="imgDetail" src={producto.photo} alt=""/>
       </div>
 
       <div className="descriptionDetail">
-        <h3>{producto.name}</h3>
+        <h2 className="descriptionName">{producto.name}</h2>
         <p>{producto.description}</p>
-        <h4>Precio: ${producto.price}</h4>
-        <h5>Stock: {producto.stock} disponibles</h5>
-        <ItemCount stock={producto.stock} inicial={1}/>
+        <h4>${producto.price}</h4>
+        <h5 className="mb-3" >Disponibles: {producto.stock}</h5>
+
+        { mostrar ? <ItemCount stock={producto.stock} onAdd={onAdd}/> : 
+          <div>
+            <Link to='/carrito'><button className="btn btn-light m-3">Terminar compra</button></Link>
+            <Link to='/'><button className="btn btn-light m-3">Seguir comprando</button></Link>
+          </div>
+          }
       </div>
     </section>
   );

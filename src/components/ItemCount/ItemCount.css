@@ -2,5 +2,9 @@
     display: flex;
     flex-direction: row;
     gap: 10px;
-    justify-content: center;
+    justify-content: left;
+}
+
+.botonColor{
+    background-color: #e1ede0 !important;
 }

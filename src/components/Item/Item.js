@@ -4,13 +4,13 @@ import './Item.css';
 export const Item = ({item}) => {
     return(
         <div className="card text-center">
-            <h4 className="card-header text-uppercase">{item.name}</h4>
+            <h4 className="card-header text-uppercase colorTarjeta">{item.name}</h4>
             <div className="card-body">
                 <img src={item.photo} className="card-img-top imgCard" alt="..."/>
-                <p className="card-text">Precio ${item.price}</p>
-                <Link to={`/detalle/${item.id}`} className="btn btn-primary">Ver más</Link>
+                <h5 className="card-text mb-3">${item.price}</h5>
+                <Link to={`/detalle/${item.id}`} className="btn btn-outline-secondary">Ver más</Link>
             </div>
-            <div className="card-footer text-muted">Stock disponible: {item.stock}</div>
+            <div className="card-footer text-muted colorTarjeta">Stock disponible: {item.stock}</div>
       </div>
     )
 }

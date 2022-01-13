@@ -41,7 +41,7 @@ const productos = [
       "id": "201",
       "categories": "casitas",
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjKwsyoXXyzpxiVqB_DkKtMxOQr3Xx71pawQ&usqp=CAU",
-      "stock": 9,
+      "stock": 1,
       "description": "Cucha de diseño tradicional con base elevada para mejor aislacion del frio y la humedad. Ideales para gatos y perros hasta 5 Kg de peso dependiendo de la contextura de cada animal. "
     },
     {
@@ -50,7 +50,7 @@ const productos = [
       "id": "202",
       "categories": "casitas",
       "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjwkD-U3Wen70-q_iJgilMwURle8hxjevDJw&usqp=CAU",
-      "stock": 9,
+      "stock": 2,
       "description": "Cucha de diseño tradicional con base elevada para mejor aislacion del frio y la humedad. Ideales para gatos y perros hasta 5 Kg de peso dependiendo de la contextura de cada animal. "
     },
       {
@@ -59,15 +59,15 @@ const productos = [
       "id": "203",
       "categories": "casitas",
       "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAWPAcsItykwyVMa-KOp7VIezKlRkbNWbGDw&usqp=CAU",
-      "stock": 9,
+      "stock": 15,
       "description": "Cucha de diseño tradicional con base elevada para mejor aislacion del frio y la humedad. Ideales para gatos y perros hasta 5 Kg de peso dependiendo de la contextura de cada animal. "
     },
     {
       "name": "Casita Cat",
       "price": 7800,
-      "id": "203",
+      "id": "204",
       "categories": "casitas",
-      "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-W12y-RyMTidIdny6VKwWtMsQcnDgKu9A1w&usqp=CAU",
+      "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQEHmRzj2IUNlOvo63WenQ2MQJJ68rFA7YAw&usqp=CAU",
       "stock": 9,
       "description": "Cucha de diseño tradicional con base elevada para mejor aislacion del frio y la humedad. Ideales para gatos y perros hasta 5 Kg de peso dependiendo de la contextura de cada animal. "
     },
@@ -85,8 +85,8 @@ const productos = [
       "price": 3400,
       "id": "301",
       "categories": "comederos",
-      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrmqm5_TRD31duuR3DvLgoFuJVAAKWq7zD5w&usqp=CAU",
-      "stock": 12,
+      "photo": "data:image/jpeg;base64,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",
+      "stock": 8,
       "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam, nihil enim quidem quaerat ipsum laborum a, similique earum doloribus aliquid aliquam fugiat at est dignissimos, aut vero possimus porro molestias?"
     },
        {
@@ -95,7 +95,7 @@ const productos = [
       "id": "302",
       "categories": "comederos",
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj0phTcxqsq_VH_3B6XbEn0zryaG_veZNfMg&usqp=CAU",
-      "stock": 12,
+      "stock": 4,
       "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam, nihil enim quidem quaerat ipsum laborum a, similique earum doloribus aliquid aliquam fugiat at est dignissimos, aut vero possimus porro molestias?"
     }
   ]

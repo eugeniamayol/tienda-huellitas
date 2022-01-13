@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export const NavBar = () => {
     return(
-      <div className="bg-light">
+      <div className="bg-light shadow">
         <nav className="navbar navbar-expand-lg navbar-light bg-light container">
           <Link to='/'>
             <img className="logo" src="../logo.png" alt="logo"/>
