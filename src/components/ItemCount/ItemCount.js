@@ -17,7 +17,7 @@ return(
             <button className="btn btn-info botonColor" onClick={disminuyeContador}>-</button>
             <h3>{contador}</h3>
             <button className="btn btn-info botonColor" onClick={aumentaContador}>+</button>
-            <button className="btn btn-light" onClick={onAdd}>Agregar al carrito</button>
+            <button className="btn btn-light" onClick={()=>onAdd(contador)}>Agregar al carrito</button>
         </div>
     )
 }
