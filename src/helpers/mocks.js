@@ -61,7 +61,7 @@ const productos = [
       "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAWPAcsItykwyVMa-KOp7VIezKlRkbNWbGDw&usqp=CAU",
       "stock": 15,
       "description": "Cucha de diseño tradicional con base elevada para mejor aislacion del frio y la humedad. Ideales para gatos y perros hasta 5 Kg de peso dependiendo de la contextura de cada animal. "
-    },
+    } ,
     {
       "name": "Casita Cat",
       "price": 7800,

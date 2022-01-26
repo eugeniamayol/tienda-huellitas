@@ -27,15 +27,31 @@ export const CartContextProvider = ({children}) =>{
         }        
     }
 
+    function eliminarId (id) {
+        const itemFiltrado = cartList.filter((prod) => prod.id !== id);
+        setcartList (itemFiltrado)
+    }
+
     function vaciarCarrito () {
         setcartList( [] )
     }
+
+    function total () {
+        let count = 0;
+        cartList.forEach((producto) => {
+            count += producto.price * producto.cantidad;
+        });
+        return count;
+    };
+
 
     return(
         <CartContext.Provider value={{
             cartList,
             agregarAlCarrito,
-            vaciarCarrito
+            vaciarCarrito,
+            eliminarId,
+            total
             }}>
             {children}
         </CartContext.Provider>
