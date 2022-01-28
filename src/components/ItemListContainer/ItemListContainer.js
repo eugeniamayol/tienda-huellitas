@@ -1,7 +1,6 @@
 import './ItemListContainer.css';
 import { ItemList } from '../ItemList/ItemList';
 import { useState, useEffect }  from 'react'; 
-import { traerProductos } from '../../helpers/mocks';
 import { useParams } from 'react-router-dom';
 import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
 
@@ -28,18 +27,7 @@ useEffect(() =>{
             .catch(err => err)
             .finally(()=> setCargando(false))
     }
-            // if (idCategoria){
-            //         traerProductos
-            //         .then(res => setProductos(res.filter( prod => prod.categories === idCategoria)))
-            //         .catch(err => console.log (err))
-            //         .finally(()=> setCargando(false))
-            //     }else{
-            //         traerProductos
-            //         .then(res => setProductos(res))
-            //         .catch(err => console.log (err))
-            //         .finally(()=> setCargando(false))
-            // }
-    }, [idCategoria])
+ }, [idCategoria])
 
     console.log(productos)
     return(
