@@ -16,4 +16,9 @@
 
 .formulario{
     text-align: center;
+    margin: 0 400px;
+}
+
+.volver{
+    text-decoration: none;
 }

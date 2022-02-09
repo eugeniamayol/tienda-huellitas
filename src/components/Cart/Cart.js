@@ -3,6 +3,7 @@ import { addDoc, collection, documentId, getDocs, getFirestore, query, where, wr
 import { useState } from "react"
 import { Resumen } from "../Resumen/Resumen.js"
 import './Cart.css';
+import { Link } from "react-router-dom";
 
 export const Cart = () => {
     const { cartList, vaciarCarrito, eliminarId, total } = useCartContext ()
@@ -18,9 +19,8 @@ export const Cart = () => {
         e.preventDefault()   
          // Nuevo objeto de orders    
         let orden = {}
-        //orden.date = Timestamp.fromDate(new Date())        
-
-        orden.buyer = dataForm // {name, email, phone}
+       
+        orden.buyer = dataForm
         orden.total = total();
 
         orden.items = cartList.map(cartItem => {
@@ -39,12 +39,10 @@ export const Cart = () => {
         await addDoc(ordenCollection, orden) // setDoc
         .then(resp => setIdOrden(resp.id))
         .catch(err => console.log(err))
-        //.finally(() => console.log('cargando'))
 
         // actualizar stock
         const queryCollection = collection(db, 'items')
 
-        //console.log(cleccionNoti)
         const queryActulizarStock = query(
             queryCollection, 
             where( documentId() , 'in', cartList.map(it => it.id))          
@@ -65,8 +63,6 @@ export const Cart = () => {
     }
 
     function handleChange(e) {
-        // console.log(e.target.name)
-        // console.log(e.target.value)
         setDataForm({
             ...dataForm,
             [e.target.name]: e.target.value
@@ -81,7 +77,7 @@ export const Cart = () => {
                     <Resumen idOrden={idOrden} />
                 : 
                     <>
-                                    {cartList.map( (prod) => (
+                                    {cartList.map( (prod) => (        
                  <div className="contenedor">
                    <div key={prod.id} className="mt-5 d-flex flex-row justify-content-around align-items-center">
                     <img src={prod.photo} className="card-img tamañoImg" alt="..."/>
@@ -92,39 +88,37 @@ export const Cart = () => {
                     <button onClick={()=>eliminarId(prod.id)} className="btn btn-light">X</button>
                    </div>  
 
-                   <h5 className="text-center">El total a pagar es de ${total()}</h5>
                  </div>
             ))}
-
-                        <button onClick={vaciarCarrito} className="btn btn-danger text-center">Vaciar Carrito</button>
+                        <h5 className="text-center m-5">El total a pagar es de ${total()}</h5>
                         <form className="formulario"
                             onSubmit={realizarCompra} 
-                            //onChange={handleChange} 
                         >
-                            <input 
+                            <input className="form-control"
                                 type='text' 
                                 name='name' 
-                                placeholder='name' 
+                                placeholder='Nombre Completo' 
                                 onChange={handleChange}
                                 value={dataForm.name}
                             /><br />
-                            <input 
-                                type='text' 
+                            <input className="form-control"
+                                type='number' 
                                 name='phone'
-                                placeholder='tel' 
+                                placeholder='Teléfono' 
                                 onChange={handleChange}
                                 value={dataForm.phone}
                             /><br/>
-                            <input 
+                            <input className="form-control"
                                 type='email' 
                                 name='email'
-                                placeholder='email' 
+                                placeholder='Email' 
                                 onChange={handleChange}
                                 value={dataForm.email}
                             /><br/>
-                            <button className="btn btn-success mt-5">Generar Orden</button>
+                            <button className="btn btn-success m-5">Generar Orden</button>
+                            <button onClick={vaciarCarrito} className="btn btn-danger m-5">Vaciar Carrito</button> 
+                            <Link to='/' className="btn btn-light mb-5">Volver</Link>
                         </form>
-                        {/* <button onClick={realizarCompra}>Generar Orden</button> */}
                     </>
 
             }          

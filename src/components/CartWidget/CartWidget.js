@@ -24,7 +24,7 @@ export const CartWidget = () => {
                                 <path d="M15 6h6m-3 -3v6" />
                             </svg>
                         </Link>
-                        <p className="cantidadCarrito">{totalProductos}</p>
+                        <p className="cantidadCarrito btn">{totalProductos}</p>
                     </div>
                 ) : (
                     <Link to="/cart">
